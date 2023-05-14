@@ -21,7 +21,7 @@ def train(model, opt, dataloader, epochs, data_var, K, device, print_step, batch
 
   for epoch in range(epochs):
     losses, rec_losses, vq_losses, perps, step = 0, 0, 0, 0, 0
-    for idx, (img, _) in enumerate(dataloader):
+    for idx, img in enumerate(dataloader):
         img = img.to(device)
         opt.zero_grad()
 
