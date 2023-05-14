@@ -42,7 +42,8 @@ class Quantizer(nn.Module):
         # z_q_x: [B, D, H, W] -> similar to z_q_x
 
         probs = torch.mean(encodings, dim=0) #prob of selecting specific e_i
-        perplexity = torch.exp(-torch.sum(probs * torch.log(probs + 1e-10))) #higher perplexity is better, Max: K
+        perplexity = torch.exp(-torch.sum(probs * torch.log(probs + 1e-10))) # higher perplexity is better
+        # Max(perplexity) = K, provided that [K / BHW] -> 0
         
         return loss, z_q_x, perplexity, e_i_stars_idx
         
