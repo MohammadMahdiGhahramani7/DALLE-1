@@ -173,7 +173,7 @@ class dVAE(nn.Module):
         
         bs = image.size(0)
         z_e_x = self.encoder(image)
-        return self.QNTZ(z_e_x)[-1].view(bs, -1) # [B*1024]
+        return self.QNTZ(z_e_x)[-1].view(bs, -1) # [B, 1024]
 
     def forward(self, x):
 
