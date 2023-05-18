@@ -16,7 +16,7 @@ Once the dVAE is trained, it is time to load the image-caption pairs dataset to 
 
 * Generation:
 
-To complete.
+Once both the dVAE and the transformer are trained, we load them to do the generation. `Main.ipynb` file includes all steps required to do so. Note that the downloaded `vocab.pickle` file from `SecondPart` is used in generation to preprocess the input text.
 
 **(I) Important note**: All code comments plus `Main.ipynb` files, have been written according to hyper-parameters proposed by the original paper. Hence, those are not necessarily pointing to the real configuration used in this repository. You might change these parameters when working on your customized dataset.
 
