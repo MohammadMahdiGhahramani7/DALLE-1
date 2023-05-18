@@ -1,5 +1,5 @@
 # DALLE-1
-Full Implementation of DALLE-1 Text-to-Image generator
+Full Implementation of DALLE-1 Text-to-Image generator: https://arxiv.org/abs/2102.12092
 
 * FirstPart:
 
