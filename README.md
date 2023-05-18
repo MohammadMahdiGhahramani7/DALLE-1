@@ -12,4 +12,12 @@ Following the paper flow, in the `FirstPart` directory, we design and train a dV
 
 * SecondPart:
 
-Once the dVAE is trained, it is time to load the image-caption pairs dataset to train the transformer. `DalleDecoder.py` includes the full implementation of the decoder-only transformer, proposed in the paper. `train_transformer.py` also contain the training procedure for the transformer. Importing these files `Main.ipynb` trains the transformer. Note that, in this section, we assume that the dataset contains image-text pairs. Text processing step has also been included in the `Main.ipynb` file. To test the code, you might use `Example_Dataset.pkl` dataset.
+Once the dVAE is trained, it is time to load the image-caption pairs dataset to train the transformer. `DalleDecoder.py` includes the full implementation of the decoder-only transformer, proposed in the paper. `train_transformer.py` also contain the training procedure for the transformer. Importing these files `Main.ipynb` trains the transformer. Note that, in this section, we assume that the dataset contains image-text pairs. Text processing step has also been included in the `Main.ipynb` file. To test the code, you might use `Example_Dataset.pkl` dataset. Although the paper uses BPE encoding for captions, I did not consider this encoding in the code. However, `BPE_Encoding` contains the full implementation of such encoding.
+
+* Generation:
+
+To complete.
+
+**(I) Important note**: All code comments plus `Main.ipynb` files, have been written according to hyper-parameters proposed by the original paper. Hence, those are not necessarily pointing to the real configuration used in this repository. You might change these parameters when working on your customized dataset.
+
+**(II) Important note**: The dVAE and the transformer, used in the paper, are both a specific kind of the general family of dVAE and transformers. Hence, if you are not familiar with the general structure and purpose of dVAEs and/or transformers, you are highly recommended to firstly review [General_dVAEs](https://github.com/MohammadMahdiGhahramani7/dVAE) and [Transformers](https://github.com/MohammadMahdiGhahramani7/MachineTranslation-Transformer).
